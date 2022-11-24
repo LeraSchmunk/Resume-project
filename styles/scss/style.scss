@@ -1,0 +1,437 @@
+@import "reset.scss";
+@import "media.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap');
+$maincolor:black;
+$maintext: white;
+$addcolor:white;
+$addtext:black;
+$fsh1: 60px;
+$fsh2: 40px;
+$fsp: 14px;
+%tplink {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.144);
+    padding: 20px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+%circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+}
+
+// -------------------------------------------- ОБЩИЕ СТИЛИ
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: $maincolor;
+    color: $maintext;
+    .hide {
+        display: none !important;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    /* 940px + padding */
+    padding: 0 15px;
+    /* Чтобы контентная часть не прижималась к краям */
+    margin: 0 auto;
+}
+
+#burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.common-section {
+    padding: 60px 0;
+}
+
+h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+// --------------------------------------------- HEADER
+.header {
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.233);
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 15px;
+        max-height: 60px;
+    }
+    .logo {
+        font-family: 'Cormorant Garamond', serif;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 40px;
+        color: #fff;
+    }
+    .logo:hover {
+        color: black;
+        padding: 15px;
+        border: 1px solid white;
+        background-color: #fff;
+        border-radius: 2px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    li:hover {
+        // font-size: 18px;
+        transition: .3s;
+        transform: scale(1.2);
+    }
+    li+li {
+        margin-left: 60px;
+    }
+}
+
+// --------------------------------------------- ABOUT
+.about {
+    min-height: 600px;
+    height: 100vh;
+    padding: 170px 0;
+    .about__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1 {
+        font-size: $fsh1;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    h2 {
+        font-size: $fsh2;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 15px 0;
+    }
+    p {
+        font-size: $fsp;
+    }
+    .description__subtitle {
+        max-width: 800px;
+        text-align: justify;
+    }
+    .photo img {
+        max-width: 400px;
+        // width: 400px;
+        // max-height: 500px;
+        object-fit: contain;
+        padding-left: 20px;
+    }
+    .tplink {
+        @extend %tplink;
+    }
+    .tplink:hover {
+        background-color: rgba(255, 255, 255, 0.212);
+        transition: background-color .2s;
+    }
+}
+
+// ---------------------------------------------------- STUDY
+.common-section--white {
+    background-color: $addcolor;
+    color: $addtext;
+    height: 100vh;
+    .main-title {
+        position: relative;
+        // margin-bottom: 70px;
+    }
+    .main-title::after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        left: 350px;
+        right: 20px;
+        display: block;
+        content: "";
+        /*Для отображения псевдоэлемента */
+        width: 76%;
+        height: 8px;
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+.title-wrapper {
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 35px;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+.tabs {
+    .tabs__nav {
+        margin: 40px 0;
+        button {
+            padding: 10px 30px;
+            font-size: 20px;
+            line-height: 1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background-color: #000000c5;
+            border-radius: 4px;
+        }
+        button.active {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border: 1px solid black;
+        }
+        button+button {
+            margin-left: 18px;
+        }
+    }
+    .tabs__item {
+        h4 {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 3px;
+            span {
+                text-transform: capitalize;
+            }
+        }
+        h5 {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin: 20px 0;
+            letter-spacing: 3px;
+        }
+        .year {
+            position: relative;
+            padding-left: 100px;
+            margin: 10px 0;
+        }
+        .year::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            display: block;
+            content: "";
+            /*Для отображения псевдоэлемента */
+            width: 4%;
+            height: 4px;
+            background-color: rgb(0, 0, 0);
+        }
+        h6 {
+            font-size: 20px;
+        }
+    }
+    .tabs__desc {
+        p {
+            margin: 20px 0;
+        }
+    }
+}
+
+// ---------------------------------------------------- CAREER
+.job {
+    h1 {
+        text-align: right;
+    }
+    .main-title::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: block;
+        content: "";
+        /*Для отображения псевдоэлемента */
+        width: 60%;
+        height: 8px;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.common-section {
+    .main-title {
+        position: relative;
+    }
+}
+
+.job__career {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    .career {
+        border: 1px solid white;
+        background-color: rgb(255, 255, 255);
+        color: $maincolor;
+        text-align: center;
+        height: 370px;
+        padding: 0 40px;
+        margin: 40px 0;
+        h6 {
+            font-size: 25px;
+        }
+        img {
+            height: 80px;
+        }
+    }
+    .rezonans {
+        img {
+            height: 20px;
+            margin: 30px 0;
+            background-color: #fff;
+        }
+    }
+    .year {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .description {
+        text-align: justify;
+        padding: 25px;
+        // display: inline-block;
+        max-height: 180px;
+        // overflow: hidden;
+        overflow: overlay;
+        li {
+            list-style: circle;
+        }
+    }
+    .tplink {
+        @extend %tplink;
+        border: 1px solid rgb(0, 0, 0);
+        margin-bottom: 10px;
+        .tplink:hover {
+            background-color: rgba(255, 255, 255, 0.212);
+            transition: background-color .2s;
+        }
+    }
+}
+
+// ---------------------------------------------------- PROJECTS
+#project {
+    height: 110vh;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // justify-content: space-between;
+    gap: 30px;
+    .card {
+        border: 1px solid rgba(0, 0, 0, 0.108);
+        border-radius: 5px;
+        padding: 20px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.233);
+        background-color: rgba(186, 186, 186, 0.251);
+    }
+    .card:hover {
+        background-color: rgb(255, 255, 255);
+    }
+    .card__img {
+        margin-bottom: 20px;
+    }
+    .card__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 3px;
+        line-height: 1.5;
+    }
+    .card__subtitle {
+        font-size: $fsp;
+        margin: 20px 0;
+        h6 {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .line {
+            display: flex;
+            margin-top: 20px;
+            height: 20px;
+            .line1 {
+                width: 44%;
+                background-color: red;
+            }
+            .line2 {
+                width: 48%;
+                background-color: rgb(139, 49, 161);
+            }
+            .line3 {
+                width: 8%;
+                background-color: rgb(223, 223, 32);
+            }
+        }
+        .points * {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            p {
+                margin-left: 20px;
+            }
+        }
+        .circle1 {
+            @extend %circle;
+            background-color: red;
+        }
+        .circle2 {
+            @extend %circle;
+            background-color: rgb(139, 49, 161);
+        }
+        .circle3 {
+            @extend %circle;
+            background-color: rgb(223, 223, 32);
+        }
+    }
+}
+
+// ---------------------------------------------------- FOOTER
+footer {
+    // height: 150px;
+    h6 {
+        display: flex;
+        justify-content: center;
+        margin: 70px 0;
+    }
+    .footer__social ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin: 40px 0;
+    }
+    li {
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    li:hover {
+        // font-size: 18px;
+        transition: .3s;
+        transform: scale(1.2);
+    }
+}
