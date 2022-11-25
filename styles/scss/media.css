@@ -121,9 +121,8 @@
     max-width: 50%;
   }
   .project-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 50px;
@@ -190,6 +189,10 @@
   }
   .main-title::after {
     max-width: 40%;
+  }
+  .footer__social ul {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 

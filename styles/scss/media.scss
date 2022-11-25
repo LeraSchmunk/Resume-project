@@ -115,7 +115,7 @@
                 max-width: 50%;
             }
             .project-cards {
-                display: flex;
+                display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 50px;
                 .card1 {
@@ -179,6 +179,9 @@
             }
             .main-title::after {
                 max-width: 40%;
+            }
+            .footer__social ul {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
