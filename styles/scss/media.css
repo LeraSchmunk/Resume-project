@@ -194,7 +194,8 @@
     font-size: 16px;
   }
   .tabs .tabs__item p {
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 1.5;
   }
   footer .footer__social ul {
     -ms-grid-columns: (1fr)[2];
@@ -220,16 +221,24 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .main-title h1 {
+    font-size: 40px;
+  }
+  .title-wrapper h3 {
+    font-size: 25px;
+    margin: 20px 0;
+  }
   .tabs .tabs__item h4,
   .tabs .tabs__item h5 {
     font-size: 16px;
   }
   .tabs .tabs__item p {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
   }
   .tabs .tabs__nav button {
     margin: 10px 0;
-    width: 200px;
+    width: 150px;
   }
   .job__career .career {
     padding: 0 10px;
@@ -238,20 +247,6 @@
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-  }
-}
-
-@media (max-width: 1050px) and (max-width: 570px) {
-  .tabs .tabs__item h4,
-  .tabs .tabs__item h5 {
-    font-size: 16px;
-  }
-  .tabs .tabs__item p {
-    font-size: 13px;
-  }
-  .tabs .tabs__nav button {
-    margin: 10px 0;
-    width: 150px;
   }
 }
 
@@ -272,6 +267,10 @@
     font-size: 25px;
     margin: 20px 0;
   }
+  .tabs .tabs__item p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
 @media (max-width: 1050px) and (max-width: 490px) {
@@ -279,23 +278,36 @@
     padding: 20px;
     margin: 10px 0;
   }
-  .tabs .tabs__item h4,
-  .tabs .tabs__item h5 {
-    font-size: 14px;
-  }
-  .tabs .tabs__item p {
-    font-size: 12px;
-  }
   .tabs .tabs__nav button {
-    margin: 10px 0;
-    width: 150px;
+    width: 120px;
+    font-size: 14px;
+    padding: 10px 5px;
+    line-height: 2;
   }
 }
 
 @media (max-width: 1050px) and (max-width: 450px) {
+  .study {
+    padding: 20px 0;
+    height: 110vh;
+  }
   .about .tplink {
     padding: 20px;
     margin-top: 10px;
+  }
+  .common-section .main-title {
+    margin-bottom: 10px;
+  }
+  .main-title h1 {
+    font-size: 30px;
+  }
+  .title-wrapper h3 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  .tabs .tabs__item h4,
+  .tabs .tabs__item h5 {
+    font-size: 14px;
   }
   .tabs .tabs__nav button {
     height: 100px;
@@ -310,6 +322,10 @@
 }
 
 @media (max-width: 1050px) and (max-width: 380px) {
+  .study {
+    padding: 20px 0;
+    height: 110vh;
+  }
   .about .tplink,
   .job__career .tplink {
     padding: 10px;

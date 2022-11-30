@@ -108,6 +108,12 @@ h1 {
     li+li {
         margin-left: 60px;
     }
+    .burger-menu {
+        display: none;
+    }
+    .menu-window {
+        display: none;
+    }
 }
 
 // --------------------------------------------- ABOUT
@@ -344,6 +350,7 @@ h1 {
     // justify-content: space-between;
     gap: 30px;
     .card {
+        position: relative;
         border: 1px solid rgba(0, 0, 0, 0.108);
         border-radius: 5px;
         padding: 20px;
@@ -366,22 +373,31 @@ h1 {
     .card__subtitle {
         font-size: $fsp;
         margin: 20px 0;
+        padding-bottom: 50px;
         h6 {
             margin-top: 10px;
             font-size: 14px;
         }
     }
     .gh-button {
+        position: absolute;
+        bottom: 20px;
+        margin-top: 20px;
         border: 1px solid rgb(159, 159, 159);
         border-radius: 5px;
         background-color: #fff;
-        display: flex;
-        align-items: center;
+        display: block;
+        width: 80%;
+        text-align: center;
         justify-content: center;
         padding: 20px 0;
-        a {
+        .gh {
             letter-spacing: 2px;
             text-transform: uppercase;
+            // padding-left: 40%;
+        }
+        button {
+            align-items: center;
         }
     }
     .gh-button:active {

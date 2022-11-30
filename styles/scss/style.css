@@ -92,13 +92,6 @@ legend {
 }
 
 @media (max-width: 1100px) {
-  .main-title::before,
-  .main-title::after {
-    max-width: 65%;
-  }
-}
-
-@media (max-width: 1100px) {
   .main-title::after {
     max-width: 600px;
   }
@@ -178,8 +171,6 @@ legend {
     font-size: 14px;
   }
   .job__career .rezonans img {
-    height: 80px;
-    margin: 0px 0;
     background-color: #fff;
   }
 }
@@ -267,7 +258,20 @@ legend {
   .main-title::after {
     max-width: 40%;
   }
-  .footer__social ul {
+  .tabs .tabs__nav button {
+    margin: 10px 0;
+    width: 200px;
+    font-size: 16px;
+  }
+  .tabs .tabs__item h4,
+  .tabs .tabs__item h5 {
+    font-size: 16px;
+  }
+  .tabs .tabs__item p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  footer .footer__social ul {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
@@ -291,16 +295,24 @@ legend {
         -ms-flex-align: center;
             align-items: center;
   }
+  .main-title h1 {
+    font-size: 40px;
+  }
+  .title-wrapper h3 {
+    font-size: 25px;
+    margin: 20px 0;
+  }
   .tabs .tabs__item h4,
   .tabs .tabs__item h5 {
     font-size: 16px;
   }
   .tabs .tabs__item p {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
   }
   .tabs .tabs__nav button {
     margin: 10px 0;
-    width: 200px;
+    width: 150px;
   }
   .job__career .career {
     padding: 0 10px;
@@ -325,6 +337,14 @@ legend {
   .job h1 {
     text-align: center;
   }
+  .title-wrapper h3 {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  .tabs .tabs__item p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
 @media (max-width: 1050px) and (max-width: 490px) {
@@ -332,12 +352,36 @@ legend {
     padding: 20px;
     margin: 10px 0;
   }
+  .tabs .tabs__nav button {
+    width: 120px;
+    font-size: 14px;
+    padding: 10px 5px;
+    line-height: 2;
+  }
 }
 
 @media (max-width: 1050px) and (max-width: 450px) {
+  .study {
+    padding: 20px 0;
+    height: 110vh;
+  }
   .about .tplink {
     padding: 20px;
     margin-top: 10px;
+  }
+  .common-section .main-title {
+    margin-bottom: 10px;
+  }
+  .main-title h1 {
+    font-size: 30px;
+  }
+  .title-wrapper h3 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  .tabs .tabs__item h4,
+  .tabs .tabs__item h5 {
+    font-size: 14px;
   }
   .tabs .tabs__nav button {
     height: 100px;
@@ -352,6 +396,10 @@ legend {
 }
 
 @media (max-width: 1050px) and (max-width: 380px) {
+  .study {
+    padding: 20px 0;
+    height: 110vh;
+  }
   .about .tplink,
   .job__career .tplink {
     padding: 10px;
@@ -480,6 +528,14 @@ h1 {
 
 .header li + li {
   margin-left: 60px;
+}
+
+.header .burger-menu {
+  display: none;
+}
+
+.header .menu-window {
+  display: none;
 }
 
 .about {
@@ -730,6 +786,7 @@ h1 {
 }
 
 .project-cards .card {
+  position: relative;
   border: 1px solid rgba(0, 0, 0, 0.108);
   border-radius: 5px;
   padding: 20px;
@@ -757,6 +814,7 @@ h1 {
 .project-cards .card__subtitle {
   font-size: 14px;
   margin: 20px 0;
+  padding-bottom: 50px;
 }
 
 .project-cards .card__subtitle h6 {
@@ -765,24 +823,30 @@ h1 {
 }
 
 .project-cards .gh-button {
+  position: absolute;
+  bottom: 20px;
+  margin-top: 20px;
   border: 1px solid #9f9f9f;
   border-radius: 5px;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
+  width: 80%;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 0;
 }
 
-.project-cards .gh-button a {
+.project-cards .gh-button .gh {
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.project-cards .gh-button button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .project-cards .gh-button:active {
