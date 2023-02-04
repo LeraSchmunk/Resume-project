@@ -1,14 +1,15 @@
-function burgerMenu() {
-    const menuBtn = document.getElementById('burger-menu')
-    const window = document.getElementById('menu-window')
+const btnBurger = document.querySelector('.humburger-menu')
+const humbergerMenu = document.querySelector('.header__nav')
+    // console.dir(btnBurger)
 
-    menuBtn.addEventListener('click', menu);
-
-    function menu(e) {
-        e.preventDefault();
-        menu.classList.toggle("open")
-            // console.log('меню')
-    }
+const toggleMenu = () => {
+    btnBurger.classList.toggle('humburger-menu-active');
+    humbergerMenu.classList.toggle('header__nav-active')
 }
 
-burgerMenu()
+btnBurger.addEventListener('click', () => {
+    toggleMenu()
+})
+humbergerMenu.addEventListener('click', () => {
+    toggleMenu()
+})
